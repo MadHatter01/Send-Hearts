@@ -25,9 +25,8 @@ useEffect (()=>{
 }, []);
 
   return (
-    <div className='app'>
+    <div className='app-container'>
       <Emojis sendReaction={sendReaction}/>
-      <p>Reaction Count: </p>
       <ReactionCounter reactions = {reactions}/>
     </div>
   )

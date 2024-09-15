@@ -4,7 +4,7 @@ const ReactionCounter = ({ reactions }) => {
        
             {Object.keys(reactions).map((emoji) => {
                 return (<div key={emoji}>
-                    <span>{emoji}</span>: {reactions[emoji]} reactions
+                    <span>{emoji}</span> {reactions[emoji]} reactions
                 </div>)
             })}
         </div>

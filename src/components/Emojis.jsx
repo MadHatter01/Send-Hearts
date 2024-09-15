@@ -5,7 +5,7 @@ const Emojis = ({sendReaction})=>{
        <div className="emojis">
 
         {emojis.map((emoji)=>(
-            <button key={emoji} onClick={()=> sendReaction(emoji)}>{emoji}</button>
+            <button  className='emoji-btn' key={emoji} onClick={()=> sendReaction(emoji)}>{emoji}</button>
         ))}
        </div>
     )
