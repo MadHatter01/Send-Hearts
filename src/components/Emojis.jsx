@@ -1,4 +1,4 @@
-const emojis = [ '❤️'];
+const emojis = [ '❤️', '✨', '🐧', '👀'];
 
 const Emojis = ({sendReaction})=>{
     return (

@@ -40,7 +40,12 @@
 }
 
 .emoji-btn:hover{
-  transform:scale(1.25);
+  transform:scale(1.5);
 }
 
 
+.reactions{
+  display:flex;
+  gap:2rem;
+  justify-content: center;
+}
