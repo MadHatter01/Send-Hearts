@@ -7,6 +7,7 @@ const cors = require("cors");
 const server = http.createServer(app);
 
 app.use(cors());
+
 const io = new Server(server, {
     cors:{
         origin:"http://localhost:5173",
@@ -14,11 +15,13 @@ const io = new Server(server, {
     },
 });
 
+
+let reactions = {};
 io.on("connection", (socket)=>{
     console.log(`user connected: ${socket.id}`);
-    socket.on("send_reactions", (data)=>{
-     
-        io.emit("reaction_display", data);
+    socket.on("send_reactions", (emoji)=>{
+        reactions[emoji] = (reactions[emoji] || 0) + 1; 
+        io.emit("reaction_display", reactions);
     });
 
     socket.on('disconnect', () => {
