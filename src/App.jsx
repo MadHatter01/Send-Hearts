@@ -17,6 +17,7 @@ const sendReaction = (emoji)=>{
 useEffect (()=>{
   
   socket.on("reaction_display", (data)=>{
+    console.log('receiving data from server')
     setReactions(data);
   });
   

@@ -19,6 +19,9 @@ const io = new Server(server, {
 let reactions = {};
 io.on("connection", (socket)=>{
     console.log(`user connected: ${socket.id}`);
+    io.emit("reaction_display", reactions);
+
+
     socket.on("send_reactions", (emoji)=>{
         reactions[emoji] = (reactions[emoji] || 0) + 1; 
         io.emit("reaction_display", reactions);
