@@ -1,8 +1,28 @@
-# React + Vite
+# Send Hearts
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple react application built with sockets. Users can send and see live reactions updated across all connected clients. 
 
-Currently, two official plugins are available:
+The app is build with React on the frontend and Node.js with Socket.io on the backend. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The frontend of the application is deployed on Github Pages and the backend is hosted on Render. 
+
+
+## Demo
+https://madhatter01.github.io/Send-Hearts/
+
+
+
+## Environment Variables
+An .env file is present in both the frontend and backend directories.
+
+### Frontend .env:
+```
+VITE_API_URL=https://my-backend-url.onrender.com
+```
+
+
+### Backend .env:
+```
+CLIENT_URL=https://madhatter01.github.io
+PORT=3001
+```
