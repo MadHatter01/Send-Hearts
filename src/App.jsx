@@ -21,7 +21,7 @@ function App() {
 
     socket.on('connect_error', ()=>{
       setServerOnline(false);
-      setErrorMessage('Unable to connect to the server. Please try again later');
+      setErrorMessage("I wish I had infinite money, but sadly, I don’t! 💸 The server’s offline for now, but please check back later!");
     })
 
     socket.on('connect', () => {
